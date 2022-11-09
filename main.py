@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
         dtrain = xgboost.DMatrix(X_test_e )
 
-        print(model.get_params(deep=True))
+       # print(model.get_params(deep=True))
 
 
         print(model.predict(dtrain))
