@@ -37,5 +37,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: edge-model-processor
-          labels: edge-model-processor
+          tags: torrescd/edge-model-processor
+          labels: torrescd/edge-model-processor
