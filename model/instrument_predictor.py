@@ -13,10 +13,11 @@ def check_instrument(time_a, day_of_week, instrument_id, num_samples_t0,
     t = tarfile.open('model.tar.gz', 'r:gz')
     t.extractall()
 
+
+
     data = [
-        {'Time': time_a,
+        {
          'TimeMinutes': 15,
-         'DayOfWeek': day_of_week,
          'Monday': 1,
          'Tuesday': 0,
          'Wednesday': 0,
@@ -24,7 +25,6 @@ def check_instrument(time_a, day_of_week, instrument_id, num_samples_t0,
          'Friday': 0,
          'Saturday': 0,
          'Sunday': 0,
-         'InstrumentId': instrument_id,
          'num_samples_t0': num_samples_t0,
          'num_samples_t0-15': num_samples_t15,
          'num_samples_t0-30': num_samples_t30,
@@ -34,7 +34,7 @@ def check_instrument(time_a, day_of_week, instrument_id, num_samples_t0,
 
     df = pandas.DataFrame(data)
     x_test = df
-    cat_attribs = ['DayOfWeek']
+    cat_attribs = []
 
     full_pipeline = ColumnTransformer([('cat', OneHotEncoder(handle_unknown='ignore'), cat_attribs)],
                                       remainder='passthrough')
