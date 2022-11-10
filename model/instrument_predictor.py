@@ -5,7 +5,12 @@ import xgboost
 import pandas
 
 
-def check_instrument(instrument_values):
+def check_instrument(time_a, day_of_week, instrument_id, num_samples_t0,
+                     num_samples_t15, num_samples_t30, num_samples_t45):
+
+    instrument_values = [time_a, day_of_week, instrument_id, num_samples_t0,
+                         num_samples_t15, num_samples_t30, num_samples_t45]
+
     t = tarfile.open('model.tar.gz', 'r:gz')
     t.extractall()
 
