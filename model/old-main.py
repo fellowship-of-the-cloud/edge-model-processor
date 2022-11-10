@@ -13,7 +13,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 
 if __name__ == '__main__':
-    t = tarfile.open('model.tar.gz', 'r:gz')
+    t = tarfile.open('../model.tar.gz', 'r:gz')
     t.extractall()
 
     model_file_name = 'xgboost-model'
