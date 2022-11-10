@@ -17,7 +17,7 @@ def check_instrument(time_a, day_of_week, instrument_id, num_samples_t0,
 
     data = [
         {
-         'TimeMinutes': 15,
+         'TimeMinutes': time_a,
          'Monday': 1,
          'Tuesday': 0,
          'Wednesday': 0,
